@@ -61,14 +61,12 @@ document.addEventListener('DOMContentLoaded',()=>{
         li.classList = `li`
         li.append(liText)
         div.append(li)
-    })
-    let lis = document.getElementsByClassName('li')
-    for (li of lis){
         li.addEventListener('click',()=>{
             let newColor = colorArray[Math.floor(Math.random()*colorArray.length)]
             li.style.color=newColor
         })
-    }
-    
-
+        li.addEventListener('dblclick',()=>{
+            li.remove()
+        })
+    })
 })
